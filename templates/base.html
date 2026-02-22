@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillSakhi</title>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar START -->
     <nav class="navbar navbar-expand-lg shadow-sm sticky-top custom-navbar">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">🌸 SkillSakhi</a>
@@ -40,16 +36,23 @@
             </div>
         </div>
     </nav>
-    <!-- Navbar END -->
-
     <div class="container mt-5 pb-5">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }} alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
         {% block content %}{% endblock %}
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
 
-    <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
