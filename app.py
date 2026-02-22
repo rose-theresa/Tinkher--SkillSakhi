@@ -1,19 +1,23 @@
 import os
 from datetime import datetime, timedelta
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify
 from flask_mysqldb import MySQL
+from flask_cors import CORS  # REQUIRED for separate deployment
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 
 # --- INITIALIZATION ---
 app = Flask(__name__)
-app.secret_key = 'sakhi_secret_key_123'
+app.secret_key = os.environ.get('SECRET_KEY', 'sakhi_secret_key_123')
 
-# MySQL Configuration
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Rose2005@'
-app.config['MYSQL_DB'] = 'skillsakhi'
+# ENABLE CORS: Replace the origin with your actual Vercel Frontend URL later
+CORS(app, supports_credentials=True, origins=["http://localhost:3000", "https://skillsakhi.vercel.app"])
+
+# MySQL Configuration (Updated for Environment Variables)
+app.config['MYSQL_HOST'] = os.environ.get('DB_HOST', 'localhost')
+app.config['MYSQL_USER'] = os.environ.get('DB_USER', 'root')
+app.config['MYSQL_PASSWORD'] = os.environ.get('DB_PASS', 'Rose2005@')
+app.config['MYSQL_DB'] = os.environ.get('DB_NAME', 'skillsakhi')
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
@@ -133,7 +137,6 @@ def request_swap(receiver_id):
     flash("Swap request sent!", "success")
     return redirect(url_for('dashboard'))
 
-# ADDED: Accept Swap Route
 @app.route('/accept-swap/<int:match_id>')
 @login_required
 def accept_swap(match_id):
@@ -142,10 +145,9 @@ def accept_swap(match_id):
                 (match_id, session['user_id']))
     mysql.connection.commit()
     cur.close()
-    flash("Swap request accepted! You are now connected.", "success")
+    flash("Swap request accepted!", "success")
     return redirect(url_for('dashboard'))
 
-# ADDED: Decline Swap Route
 @app.route('/decline-swap/<int:match_id>')
 @login_required
 def decline_swap(match_id):
@@ -231,7 +233,6 @@ def complete_session(match_id):
         learner_id = session['user_id']
         teacher_id = match['receiver_id'] if learner_id == match['requester_id'] else match['requester_id']
         
-        # Credit Transfer: Teacher +1, Learner -1
         cur.execute("UPDATE users SET credits = credits + 1 WHERE id = %s", [teacher_id])
         cur.execute("UPDATE users SET credits = credits - 1 WHERE id = %s AND credits > 0", [learner_id])
         cur.execute("UPDATE matches SET status = 'completed' WHERE id = %s", [match_id])
