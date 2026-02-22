@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSakhi - Empowering Women Through Skill Exchange</title>
+    <meta name="description" content="SkillSakhi is a women-focused skill exchange web platform where users can teach skills to earn credits and learn skills using those credits.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo" id="logo">
+                <i class="fa-solid fa-seedling"></i> SkillSakhi
+            </a>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" id="nav-home">Home</a>
+                <a href="#" class="nav-link" id="nav-dashboard">Dashboard</a>
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary" id="btn-get-started">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- HOMEPAGE VIEW -->
+        <div id="view-home" class="view active-view">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="badge">Join the Community ✨</span>
+                        <h1>Empowering Women <br>Through Skill Exchange</h1>
+                        <p>Teach what you know to earn credits. Use credits to learn what you love. A supportive, safe, and warm space for women to grow together.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary btn-large" onclick="switchToDashboard()">Start Learning Today</button>
+                            <button class="btn btn-outline btn-large">Explore Skills</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <!-- Placeholder for illustration -->
+                        <div class="illustration-placeholder">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <i class="fa-solid fa-paintbrush floating-icon-1"></i>
+                            <i class="fa-solid fa-language floating-icon-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works section-light">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>How SkillSakhi Works</h2>
+                        <p>A simple ecosystem to share knowledge and empower each other.</p>
+                    </div>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-icon step-1"><i class="fa-solid fa-person-chalkboard"></i></div>
+                            <h3>1. Teach</h3>
+                            <p>Share your expertise in coding, design, languages, or life skills with other women.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon step-2"><i class="fa-solid fa-coins"></i></div>
+                            <h3>2. Earn Credits</h3>
+                            <p>For every hour you teach, earn Skill Credits to your wallet.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon step-3"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <h3>3. Learn</h3>
+                            <p>Spend your credits to book sessions and learn new skills from experts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Skills Section -->
+            <section class="featured-skills">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Explore Featured Skills</h2>
+                        <a href="#" class="view-all">View all skills <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="skills-grid">
+                        <!-- Skill Card 1 -->
+                        <div class="skill-card">
+                            <div class="skill-tag design">Design</div>
+                            <h3 class="skill-title">UI/UX Design for Beginners</h3>
+                            <div class="skill-mentor">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Mentor" class="mentor-avatar">
+                                <span class="mentor-name">by Priya S.</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-cost"><i class="fa-solid fa-coins"></i> 3 Credits</span>
+                                <button class="btn btn-sm btn-outline">Book</button>
+                            </div>
+                        </div>
+                        <!-- Skill Card 2 -->
+                        <div class="skill-card">
+                            <div class="skill-tag tech">Technology</div>
+                            <h3 class="skill-title">Intro to JavaScript & React</h3>
+                            <div class="skill-mentor">
+                                <img src="https://i.pravatar.cc/150?img=44" alt="Mentor" class="mentor-avatar">
+                                <span class="mentor-name">by Aisha K.</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-cost"><i class="fa-solid fa-coins"></i> 5 Credits</span>
+                                <button class="btn btn-sm btn-outline">Book</button>
+                            </div>
+                        </div>
+                        <!-- Skill Card 3 -->
+                        <div class="skill-card">
+                            <div class="skill-tag language">Language</div>
+                            <h3 class="skill-title">Conversational French</h3>
+                            <div class="skill-mentor">
+                                <img src="https://i.pravatar.cc/150?img=9" alt="Mentor" class="mentor-avatar">
+                                <span class="mentor-name">by Chloe M.</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-cost"><i class="fa-solid fa-coins"></i> 2 Credits</span>
+                                <button class="btn btn-sm btn-outline">Book</button>
+                            </div>
+                        </div>
+                        <!-- Skill Card 4 -->
+                        <div class="skill-card">
+                            <div class="skill-tag business">Business</div>
+                            <h3 class="skill-title">Startup Pitching & Funding</h3>
+                            <div class="skill-mentor">
+                                <img src="https://i.pravatar.cc/150?img=32" alt="Mentor" class="mentor-avatar">
+                                <span class="mentor-name">by Neha R.</span>
+                            </div>
+                            <div class="skill-footer">
+                                <span class="skill-cost"><i class="fa-solid fa-coins"></i> 4 Credits</span>
+                                <button class="btn btn-sm btn-outline">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials section-light">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Community Stories</h2>
+                        <p>Hear from women who have grown with SkillSakhi.</p>
+                    </div>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="quote-text">"I taught Yoga and used my credits to learn Python! The environment is so incredibly supportive and free of judgement."</p>
+                            <div class="user-info">
+                                <img src="https://i.pravatar.cc/150?img=5" alt="User">
+                                <div>
+                                    <h4>Maya T.</h4>
+                                    <span>Software Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <p class="quote-text">"SkillSakhi helped me build a portfolio. I bartered my graphic design skills for digital marketing sessions. It's brilliant!"</p>
+                            <div class="user-info">
+                                <img src="https://i.pravatar.cc/150?img=10" alt="User">
+                                <div>
+                                    <h4>Sarah J.</h4>
+                                    <span>Freelance Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- DASHBOARD VIEW -->
+        <div id="view-dashboard" class="view">
+            <div class="container dashboard-layout">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="user-profile-summary">
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Profile" class="profile-pic-large">
+                        <h3>Welcome back, Priya!</h3>
+                        <p>UX Designer & Learner</p>
+                    </div>
+                    <ul class="sidebar-nav">
+                        <li class="active"><a href="#"><i class="fa-solid fa-layer-group"></i> Overview</a></li>
+                        <li><a href="#"><i class="fa-solid fa-book-open"></i> My Learning</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chalkboard-user"></i> My Teaching</a></li>
+                        <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Schedule</a></li>
+                        <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                    </ul>
+                    <div class="sidebar-footer">
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                    </div>
+                </aside>
+
+                <!-- Dashboard Content -->
+                <div class="dashboard-main">
+                    <div class="dashboard-header">
+                        <h2>Dashboard Overview</h2>
+                        <div class="date-display" id="current-date">October 24, 2023</div>
+                    </div>
+
+                    <!-- Wallet Card -->
+                    <div class="wallet-card">
+                        <div class="wallet-info">
+                            <p class="wallet-label">Available Balance</p>
+                            <h2 class="wallet-balance"><i class="fa-solid fa-coins"></i> 12 Credits</h2>
+                            <p class="wallet-subtext">+3 Credits earned this week!</p>
+                        </div>
+                        <div class="wallet-actions">
+                            <button class="btn btn-outline-white">Spend Credits</button>
+                            <button class="btn btn-white">Offer a Skill</button>
+                        </div>
+                        <div class="wallet-decoration">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <!-- My Skills Tabs -->
+                        <div class="dashboard-panel skills-panel">
+                            <div class="panel-header">
+                                <h3>My Skills</h3>
+                                <div class="custom-tabs">
+                                    <button class="tab-btn active" onclick="switchTab('learn')">To Learn</button>
+                                    <button class="tab-btn" onclick="switchTab('teach')">To Teach</button>
+                                </div>
+                            </div>
+                            <div class="panel-content">
+                                <!-- Learn Tab Content -->
+                                <div id="tab-learn" class="tab-content active">
+                                    <ul class="activity-list">
+                                        <li class="activity-item">
+                                            <div class="activity-icon bg-pink"><i class="fa-brands fa-python"></i></div>
+                                            <div class="activity-details">
+                                                <h4>Python Data Science</h4>
+                                                <p>2 sessions completed • 4 remaining</p>
+                                            </div>
+                                            <div class="activity-status">In Progress</div>
+                                        </li>
+                                        <li class="activity-item">
+                                            <div class="activity-icon bg-lavender"><i class="fa-solid fa-chart-pie"></i></div>
+                                            <div class="activity-details">
+                                                <h4>SEO Fundamentals</h4>
+                                                <p>Starts on Nov 2</p>
+                                            </div>
+                                            <div class="activity-status pending">Upcoming</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Teach Tab Content -->
+                                <div id="tab-teach" class="tab-content">
+                                    <ul class="activity-list">
+                                        <li class="activity-item">
+                                            <div class="activity-icon bg-thistle"><i class="fa-solid fa-pen-nib"></i></div>
+                                            <div class="activity-details">
+                                                <h4>Intro to Figma</h4>
+                                                <p>5 students enrolled</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-outline">Manage</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Sessions -->
+                        <div class="dashboard-panel schedule-panel">
+                            <div class="panel-header">
+                                <h3>Upcoming Sessions</h3>
+                                <a href="#" class="panel-link">View Calendar</a>
+                            </div>
+                            <div class="panel-content">
+                                <div class="session-card">
+                                    <div class="session-date">
+                                        <span class="day">28</span>
+                                        <span class="month">OCT</span>
+                                    </div>
+                                    <div class="session-info">
+                                        <h4>Python Data Science</h4>
+                                        <p><i class="fa-regular fa-clock"></i> 10:00 AM - 11:30 AM</p>
+                                        <p><i class="fa-solid fa-chalkboard-user"></i> with Mentor Tara</p>
+                                    </div>
+                                    <button class="btn-icon"><i class="fa-solid fa-video"></i></button>
+                                </div>
+                                <div class="session-card">
+                                    <div class="session-date">
+                                        <span class="day">02</span>
+                                        <span class="month">NOV</span>
+                                    </div>
+                                    <div class="session-info">
+                                        <h4>SEO Fundamentals</h4>
+                                        <p><i class="fa-regular fa-clock"></i> 2:00 PM - 3:00 PM</p>
+                                        <p><i class="fa-solid fa-chalkboard-user"></i> with Mentor Sarah</p>
+                                    </div>
+                                    <button class="btn-icon btn-disabled"><i class="fa-solid fa-video"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity History -->
+                        <div class="dashboard-panel history-panel full-width">
+                            <div class="panel-header">
+                                <h3>Recent Transactions</h3>
+                            </div>
+                            <div class="panel-content">
+                                <table class="history-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Type</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Oct 20, 2023</td>
+                                            <td>Taught "Figma Basics" to Jane D.</td>
+                                            <td><span class="badge badge-success">Earned</span></td>
+                                            <td class="text-success">+2 Credits</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Oct 18, 2023</td>
+                                            <td>Booked "Python 101" session</td>
+                                            <td><span class="badge badge-spent">Spent</span></td>
+                                            <td class="text-spent">-3 Credits</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Oct 15, 2023</td>
+                                            <td>Welcome Bonus</td>
+                                            <td><span class="badge badge-success">Earned</span></td>
+                                            <td class="text-success">+5 Credits</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-seedling"></i> SkillSakhi
+                </a>
+                <p>Empowering women through knowledge sharing, one skill at a time.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <a href="#">Browse Skills</a>
+                <a href="#">Become a Mentor</a>
+                <a href="#">How it Works</a>
+                <a href="#">Pricing</a>
+            </div>
+            <div class="footer-links">
+                <h4>Community</h4>
+                <a href="#">Events</a>
+                <a href="#">Blog</a>
+                <a href="#">Forum</a>
+                <a href="#">Success Stories</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Trust & Safety</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 SkillSakhi. Demo developed for Hackathon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

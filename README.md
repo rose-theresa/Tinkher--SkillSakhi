@@ -2,27 +2,34 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [SkillSakhi] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [HerImpact]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Smrithi S] - [Toc H Institute of science and Technology]
+- Member 2: [Rose Theresa P R] - [Toc H Institute of science and Technology]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[SkillSakhi is a women-only skill exchange platform where members teach and learn from each other using a credit-based system. Instead of money, users earn credits by sharing their skills and spend them to learn new ones. It empowers women to grow, connect, and build knowledge together in a supportive community.]
 
 ### The Problem statement
-[What problem are you solving?]
+[SkillSakhi solves the problem of limited access to affordable and safe learning spaces for women. Many women have valuable skills but lack platforms to share them or learn new ones without financial barriers.
+
+We create a trusted, women-only community where skills can be exchanged using credits instead of money—making learning accessible, empowering, and collaborative.]
+
 
 ### The Solution
-[How are you solving it?]
+[We solve this by creating a women-only digital platform where members can exchange skills using a credit-based system instead of money.
+
+Users earn credits by teaching a skill and use those credits to learn something new from others.
+
+By combining skill listings, session scheduling, and a credit wallet system, SkillSakhi makes learning accessible, affordable, and empowering.]
 
 ---
 
@@ -31,25 +38,26 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
-
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Languages used: [Python,HTML5,CSS3,SQL (MySQL),JavaScript]
+- Frameworks used: [Flask,Bootstrap 5]
+- Libraries used: [Flask-MySQLdb,Werkzeug (Security),Jinja2,DateTime,Functools (wraps)]
+- Tools used: [VS Code (Visual Studio Code),MySQL Workbench / Command Line,Jinja2 Template Debugger,Bootstrap Icons / Emojis]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Smart Peer Matching System-
+The platform uses a matching algorithm in the backend to scan the database and suggest "Skill Sakhis" based on a mutual exchange: someone who teaches what you want to learn and vice versa.]
+
+- Feature 2: [Dynamic Credit Wallet-
+To ensure a fair exchange, the project implements a credit system where users start with a balance (e.g., 5 or 7 credits) that fluctuates as they teach or learn.The backend automatically handles credit transfers: the teacher gains 1 credit and the learner loses 1 credit once a session is marked as "Complete".]
+
+- Feature 3: [Interactive Session Hub & Real-time Chat- 
+Once a swap is accepted, partners can enter a dedicated "Interaction Room" featuring a built-in chat system to communicate and coordinate their learning journey.]
+
+- Feature 4: [Automated Session Scheduling & Timeline- Users can schedule multi-day learning plans, which are then displayed in a "Session Timeline" on the dashboard.The feature includes a frontend JavaScript formatter that automatically converts 24-hour database time into a user-friendly 12-hour AM/PM format.]
 
 ---
 
@@ -59,23 +67,14 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+[Installation commands - git clone https://github.com/your-username/SkillSakhi.git
+cd SkillSakhi, pip install flask flask-mysqldb werkzeug]
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+[Run commands - python app.py]
 ```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
----
 
 ## Project Documentation
 
@@ -106,30 +105,8 @@ List the key features of your project:
 
 ---
 
-### For Hardware:
 
-#### Schematic & Circuit
 
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-#### Build Photos
-
-![Team](Add photo of your team here)
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
----
 
 ## Additional Documentation
 

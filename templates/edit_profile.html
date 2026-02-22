@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm p-4 border-0" style="border-radius: 15px;">
+            <h3 class="text-center mb-4" style="color: #4b2c82;">Update Your Skills</h3>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Skills you Teach (comma separated)</label>
+                    <textarea name="teaches" class="form-control" rows="2">{{ user_data.teaches }}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Skills you want to Learn</label>
+                    <textarea name="learns" class="form-control" rows="2">{{ user_data.learns }}</textarea>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary" style="background-color: #6f42c1;">Save Changes</button>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

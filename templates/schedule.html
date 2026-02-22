@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow p-4 border-0" style="border-radius: 15px;">
+            <h3 class="text-center mb-4" style="color: #4b2c82;">Schedule Your Session</h3>
+            <p class="text-center text-muted">Coordinating with <strong>{{ partner.name }}</strong></p>
+            
+            <form action="/schedule/{{ match_id }}" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Select Start Date</label>
+                    <input type="date" name="date" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Select Start Time</label>
+                    <input type="time" name="time" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">How many total days?</label>
+                    <input type="number" name="days" class="form-control" min="1" value="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="background-color: #6f42c1;">Confirm Full Schedule</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
