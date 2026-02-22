@@ -13,7 +13,7 @@
 - Member 2: [Rose Theresa P R] - [Toc H Institute of science and Technology]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[https://tinkher-skill-sakhi-8iy1.vercel.app/]
 
 ### Project Description
 [SkillSakhi is a women-only skill exchange platform where members teach and learn from each other using a credit-based system. Instead of money, users earn credits by sharing their skills and spend them to learn new ones. It empowers women to grow, connect, and build knowledge together in a supportive community.]
@@ -115,22 +115,22 @@ cd SkillSakhi, pip install flask flask-mysqldb werkzeug]
 
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:** `https://tinkher-skill-sakhi-8iy1.vercel.app/`
 
 ##### Endpoints
 
 **GET /api/endpoint**
-- **Description:** [What it does]
+- **Description:** [Retrieves the logged-in user's profile, active swap matches, and scheduled session timelines]
 - **Parameters:**
   - `param1` (string): [Description]
   - `param2` (integer): [Description]
 - **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
+```{
+  "user": {"name": "anna sojan", "credits": 7, "teaches": "bharathanatyam", "learns": "python"},
+  "matches": [{"partner_name": "Mushrifa G B", "status": "accepted"}],
+  "session_days": []
 }
-```
+
 
 **POST /api/endpoint**
 - **Description:** [What it does]
@@ -153,92 +153,6 @@ cd SkillSakhi, pip install flask flask-mysqldb werkzeug]
 
 ---
 
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
-
-### For Hardware Projects:
-
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
 
 ### For Scripts/CLI Tools:
 
@@ -282,24 +196,24 @@ python script.py -c config.json --verbose input.txt
 **Example 1: Basic Processing**
 
 **Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
+-- Sample user registration data for testing
+INSERT INTO users (name, email, password, teaches, learns, credits) 
+VALUES ('anna sojan', 'anna@example.com', 'hashed_pass', 'Python', 'Dance', 7);
 
 **Command:**
-```bash
-python script.py sample.txt
-```
+# Running the Flask backend from the backend directory
+```cd backend
+python app.py```
 
 **Output:**
 ```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
+* Serving Flask app 'app'
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000
+Processing: Database Connection... Success
+Connected to: skillsakhi_db
+Active Sessions monitored: 2
+Credit system status: Operational
 ```
 
 **Example 2: Advanced Usage**
@@ -378,9 +292,9 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [Smrithi S]: [Specific contributions - Frontend development, UI design]
+- [Rose Theresa P R]: [Specific contributions -  Backend development, Database design]
+
 
 ---
 
