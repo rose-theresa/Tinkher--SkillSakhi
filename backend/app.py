@@ -5,7 +5,11 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS  # REQUIRED for separate deployment
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
+from flask import Flask
+from flask_cors import CORS # Line 5 should now be clear of errors!
 
+app = Flask(__name__)
+CORS(app, supports_credentials=True) # This allows your frontend to talk to this API
 # --- INITIALIZATION ---
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'sakhi_secret_key_123')
