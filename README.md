@@ -80,16 +80,17 @@ cd SkillSakhi, pip install flask flask-mysqldb werkzeug]
 
 ### For Software:
 
-#### Screenshots (Add at least 3)
+#### Screenshots
+<img width="1366" height="768" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/af65e9df-20ce-4148-89bb-d3f83b25137e" />
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1366" height="768" alt="login" src="https://github.com/user-attachments/assets/c686f613-8d9c-4bff-8fc7-ccd87ccce4cd" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1366" height="768" alt="Dashboard" src="https://github.com/user-attachments/assets/93aea730-25a7-4332-906e-7aef5626d606" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1366" height="768" alt="RequestSwap" src="https://github.com/user-attachments/assets/5f6eaded-3a26-47c7-8734-4792cc324059" />
+<img width="1366" height="768" alt="scheduling" src="https://github.com/user-attachments/assets/c0d50f77-d7f6-45d7-9d16-af6363c14de8" />
+<img width="1366" height="768" alt="Communication" src="https://github.com/user-attachments/assets/48c67685-65ee-4b67-aa8e-e451f8690d25" />
+
 
 #### Diagrams
 
